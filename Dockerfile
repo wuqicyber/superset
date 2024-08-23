@@ -144,7 +144,7 @@ RUN apt-get update -qq \
         bzip2 \
         && rm -rf /var/lib/apt/lists/*
 
-# Instlalling headless browsers
+# Installing headless browsers
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install playwright
 RUN playwright install chromium --with-deps
